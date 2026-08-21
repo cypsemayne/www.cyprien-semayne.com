@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- ============ LANGUE / LANGUAGE ============
-     Redirige vers la version anglaise si la langue du système / navigateur
-     n'est pas le français. Un choix explicite (menu FR / EN, ou ?lang=fr|en)
-     est mémorisé et reste prioritaire. -->
+<!-- ============ LANGUAGE / LANGUE ============
+     Redirects to the French version when the system / browser language is
+     French. An explicit choice (FR / EN menu, or ?lang=fr|en) is remembered
+     and always takes precedence. -->
 <script>
 (function () {
-  var PAGE = 'fr', OTHER = 'en.html', KEY = 'cs-lang';
+  var PAGE = 'en', OTHER = 'index.html', KEY = 'cs-lang';
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
@@ -28,25 +28,25 @@
 })();
 </script>
 
-<title>Cyprien Semayne | Alto</title>
+<title>Cyprien Semayne | Viola</title>
 
 <!-- Update this to your final GitHub Pages / custom-domain URL -->
-<link rel="canonical" href="https://cyprien-semayne.com/" />
+<link rel="canonical" href="https://cyprien-semayne.com/en.html" />
 <link rel="alternate" hreflang="fr" href="https://cyprien-semayne.com/" />
 <link rel="alternate" hreflang="en" href="https://cyprien-semayne.com/en.html" />
 <link rel="alternate" hreflang="x-default" href="https://cyprien-semayne.com/" />
 
-<meta name="description" content="Cyprien Semayne, altiste français — chambriste et alto solo. Biographie, agenda de concerts, médias et contact." />
+<meta name="description" content="Cyprien Semayne, French violist — chamber musician and principal viola. Biography, concert calendar, media and contact." />
 <meta name="format-detection" content="telephone=no" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Cyprien Semayne | Alto" />
-<meta property="og:description" content="Cyprien Semayne, altiste français — chambriste et alto solo." />
+<meta property="og:title" content="Cyprien Semayne | Viola" />
+<meta property="og:description" content="Cyprien Semayne, French violist — chamber musician and principal viola." />
 <meta property="og:image" content="images/hero.jpg" />
-<meta property="og:url" content="https://cyprien-semayne.com/" />
+<meta property="og:url" content="https://cyprien-semayne.com/en.html" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Cyprien Semayne | Alto" />
-<meta name="twitter:description" content="Cyprien Semayne, altiste français — chambriste et alto solo." />
+<meta name="twitter:title" content="Cyprien Semayne | Viola" />
+<meta name="twitter:description" content="Cyprien Semayne, French violist — chamber musician and principal viola." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -281,9 +281,9 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
       <li class="lang">
-        <a href="index.html?lang=fr" hreflang="fr" lang="fr" aria-current="page">FR</a>
+        <a href="index.html?lang=fr" hreflang="fr" lang="fr">FR</a>
         <span class="sep" aria-hidden="true">/</span>
-        <a href="en.html?lang=en" hreflang="en" lang="en">EN</a>
+        <a href="en.html?lang=en" hreflang="en" lang="en" aria-current="page">EN</a>
       </li>
     </ul>
   </div>
@@ -291,9 +291,9 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
-  <p class="eyebrow">Alto</p>
+  <p class="eyebrow">Viola</p>
   <h1>Cyprien Semayne</h1>
-  <div class="scroll-cue">Découvrir<span></span></div>
+  <div class="scroll-cue">Discover<span></span></div>
 </header>
 
 <!-- ============ INFO ============ -->
@@ -301,16 +301,16 @@
   <div class="container">
     <div class="split reveal">
       <div class="split-media">
-        <img src="images/bio.jpg" alt="Portrait de Cyprien Semayne, altiste" loading="lazy" />
+        <img src="images/bio.jpg" alt="Portrait of Cyprien Semayne, violist" loading="lazy" />
       </div>
       <div class="prose">
         <p class="eyebrow">Info</p>
-        <h2 style="font-size:clamp(2rem,4.5vw,2.8rem);margin:.25em 0 .8em;">Biographie</h2>
-        <p>Cyprien Semayne est un altiste français formé à l’École Supérieure de Musique Reine Sofía de Madrid puis à la Haute École de Musique de Lausanne, site de Sion. Il a étudié auprès de Diemut Poppen, Jonathan Brown et Corinne Contardo, tout en bénéficiant de l’enseignement de Heime Müller dans le cadre de son travail en quatuor à cordes.</p>
-        <p>Au fil de sa formation, il a développé une activité régulière de chambriste, qui occupe une place centrale dans son parcours artistique. Il se produit en Europe aux côtés d’artistes tels qu’Andrey Baranov, Kirill Troussov, Veriko Tchumburidze, Dmitri Smirnov, Bartek Nizioł, Aurélienne Brauner, Patrick Demenga, Thomas Grossenbacher ou Christoph Croisé.</p>
-        <p>Parallèlement à son activité de musique de chambre, il est régulièrement alto solo pour des ensembles tels que l’Opéra du Rhône, le Beyond Modern Orchestra, le YES Orchestra, les Concerts du Cœur ou la Camerata Résonnance. Il est également invité dans des projets en France, en Suisse et en Allemagne, entre répertoire classique, créations contemporaines et formats de concert plus transversaux.</p>
-        <p>Son parcours témoigne d’un musicien curieux, ouvert aux différentes formes du jeu d’ensemble, avec une expérience solide en musique de chambre comme en orchestre.</p>
-        <p class="instrument">Cyprien Semayne joue un alto de Patrick Robin.</p>
+        <h2 style="font-size:clamp(2rem,4.5vw,2.8rem);margin:.25em 0 .8em;">Biography</h2>
+        <p>Cyprien Semayne is a French violist trained at the Reina Sofía School of Music in Madrid and then at the Haute École de Musique de Lausanne, Sion campus. He studied with Diemut Poppen, Jonathan Brown and Corinne Contardo, while also working with Heime Müller as part of his string quartet training.</p>
+        <p>Throughout his studies he has built a steady career as a chamber musician, an activity that remains central to his artistic path. He performs across Europe alongside artists such as Andrey Baranov, Kirill Troussov, Veriko Tchumburidze, Dmitri Smirnov, Bartek Nizioł, Aurélienne Brauner, Patrick Demenga, Thomas Grossenbacher and Christoph Croisé.</p>
+        <p>Alongside his chamber music work, he is regularly principal viola with ensembles such as the Opéra du Rhône, the Beyond Modern Orchestra, the YES Orchestra, the Concerts du Cœur and the Camerata Résonnance. He is also invited to take part in projects in France, Switzerland and Germany, ranging from the classical repertoire to contemporary creations and more cross-disciplinary concert formats.</p>
+        <p>His career reflects a curious musician, open to the many forms of ensemble playing, with solid experience in both chamber music and orchestral repertoire.</p>
+        <p class="instrument">Cyprien Semayne plays a viola by Patrick Robin.</p>
       </div>
     </div>
   </div>
@@ -321,17 +321,17 @@
   <div class="container">
     <div class="split split--rev reveal" style="align-items:start;">
       <div class="split-media dates-media">
-        <img src="images/events.jpg" alt="Cyprien Semayne en concert" loading="lazy" />
+        <img src="images/events.jpg" alt="Cyprien Semayne in concert" loading="lazy" />
       </div>
       <div>
         <div class="section-head">
           <p class="eyebrow">Dates</p>
-          <h2>Agenda</h2>
+          <h2>Calendar</h2>
           <div class="rule"></div>
         </div>
         <div class="agenda">
           <div class="event">
-            <div class="event-date">22 / 08 / 2026</div>
+            <div class="event-date">22 Aug 2026</div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
               <div class="event-meta">More Than Classic · Herrliberg (CH)</div>
@@ -343,7 +343,7 @@
           </div>
 
           <div class="event">
-            <div class="event-date">23 / 08 / 2026</div>
+            <div class="event-date">23 Aug 2026</div>
             <div class="event-body">
               <h3>Schubert, Haydn, Mozart, Croisé</h3>
               <div class="event-meta">Beyond Modern Orchestra · Herrliberg (CH)</div>
@@ -352,39 +352,39 @@
           </div>
 
           <div class="event">
-            <div class="event-date">18 / 09 / 2026</div>
+            <div class="event-date">18 Sep 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Bordeaux (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">19 / 09 / 2026</div>
+            <div class="event-date">19 Sep 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Blaye (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">22 / 09 / 2026</div>
+            <div class="event-date">22 Sep 2026</div>
             <div class="event-body">
-              <h3>Événement privé</h3>
+              <h3>Private Event</h3>
               <div class="event-meta">Opéra de Bordeaux · Récital Production · Bordeaux (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">27 / 09 / 2026</div>
+            <div class="event-date">27 Sep 2026</div>
             <div class="event-body">
-              <h3>Purcell, Chostakovitch &amp; Borodine</h3>
-              <div class="event-meta">avec Angèle Sevestre, Sarah Velasco &amp; Thaïs Defoort · Prieuré d’Airaines (FR)</div>
+              <h3>Purcell, Shostakovich &amp; Borodin</h3>
+              <div class="event-meta">with Angèle Sevestre, Sarah Velasco &amp; Thaïs Defoort · Prieuré d’Airaines (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">10 / 10 / 2026</div>
+            <div class="event-date">10 Oct 2026</div>
             <div class="event-body">
               <h3>Trio Reynold</h3>
               <div class="event-meta">Sion (CH)</div>
@@ -392,36 +392,36 @@
           </div>
 
           <div class="event">
-            <div class="event-date">11 / 10 / 2026</div>
+            <div class="event-date">11 Oct 2026</div>
             <div class="event-body">
-              <h3>Sextuor à cordes</h3>
-              <div class="event-meta">avec Simon Lefebvre, Sebastian Braun, Anna Egholm, Amia Janicki &amp; Gatien Leray · Concerts de Chambre du Léman · Daillens (CH)</div>
+              <h3>String Sextet</h3>
+              <div class="event-meta">with Simon Lefebvre, Sebastian Braun, Anna Egholm, Amia Janicki &amp; Gatien Leray · Concerts de Chambre du Léman · Daillens (CH)</div>
               <div class="event-links"><a href="https://asso-ccl.ch" target="_blank" rel="noopener">asso-ccl.ch</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">14 / 10 / 2026</div>
+            <div class="event-date">14 Oct 2026</div>
             <div class="event-body">
               <h3>Camerata Résonnance</h3>
-              <div class="event-meta">avec Élizabeth Sombart · Grenoble (FR)</div>
+              <div class="event-meta">with Élizabeth Sombart · Grenoble (FR)</div>
               <div class="event-links"><a href="http://www.resonnance.org/ch/events/recital-grenoble/" target="_blank" rel="noopener">resonnance.org</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">15 / 10 / 2026</div>
+            <div class="event-date">15 Oct 2026</div>
             <div class="event-body">
               <h3>Camerata Résonnance</h3>
-              <div class="event-meta">avec Élizabeth Sombart · Genève (CH)</div>
+              <div class="event-meta">with Élizabeth Sombart · Genève (CH)</div>
               <div class="event-links"><a href="http://www.resonnance.org/ch/events/recital-4/" target="_blank" rel="noopener">resonnance.org</a></div>
             </div>
           </div>
 
           <div class="event">
             <div class="event-date">
-              <span>24 / 10 / 2026</span>
-              <span>25 / 10 / 2026</span>
+              <span>24 Oct 2026</span>
+              <span>25 Oct 2026</span>
             </div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
@@ -431,16 +431,16 @@
           </div>
 
           <div class="event">
-            <div class="event-date">08 / 11 / 2026</div>
+            <div class="event-date">8 Nov 2026</div>
             <div class="event-body">
               <h3>Camerata Résonnance</h3>
-              <div class="event-meta">avec Élizabeth Sombart · Lausanne (CH)</div>
+              <div class="event-meta">with Élizabeth Sombart · Lausanne (CH)</div>
               <div class="event-links"><a href="http://www.resonnance.org/ch/events/concert-de-soutien-de-la-fondation-resonnance-2/" target="_blank" rel="noopener">resonnance.org</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">15 / 11 / 2026</div>
+            <div class="event-date">15 Nov 2026</div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
               <div class="event-meta">More Than Classic · Zurich (CH)</div>
@@ -449,32 +449,32 @@
           </div>
 
           <div class="event">
-            <div class="event-date">22 / 11 / 2026</div>
+            <div class="event-date">22 Nov 2026</div>
             <div class="event-body">
-              <h3>Camerata Résonnance — Récital</h3>
+              <h3>Camerata Résonnance — Recital</h3>
               <div class="event-meta">Salle Cortot · Paris (FR)</div>
               <div class="event-links"><a href="http://www.resonnance.org/ch/events/recital-salle-cortot-paris/" target="_blank" rel="noopener">resonnance.org</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">27 / 11 / 2026</div>
+            <div class="event-date">27 Nov 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Bordeaux (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">28 / 11 / 2026</div>
+            <div class="event-date">28 Nov 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Blaye (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">05 / 12 / 2026</div>
+            <div class="event-date">5 Dec 2026</div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
               <div class="event-meta">More Than Classic · Zurich (CH)</div>
@@ -483,7 +483,7 @@
           </div>
 
           <div class="event">
-            <div class="event-date">13 / 12 / 2026</div>
+            <div class="event-date">13 Dec 2026</div>
             <div class="event-body">
               <h3>Sedunum String Orchestra &amp; Erik Truffaz</h3>
               <div class="event-meta">Sion (CH)</div>
@@ -492,32 +492,32 @@
           </div>
 
           <div class="event">
-            <div class="event-date">18 / 12 / 2026</div>
+            <div class="event-date">18 Dec 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Bordeaux (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">19 / 12 / 2026</div>
+            <div class="event-date">19 Dec 2026</div>
             <div class="event-body">
-              <h3>Trio à cordes</h3>
+              <h3>String Trio</h3>
               <div class="event-meta">Blaye (FR)</div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">03 / 01 / 2027</div>
+            <div class="event-date">3 Jan 2027</div>
             <div class="event-body">
-              <h3>Niederlenzer Musiktage — Concert du Nouvel An</h3>
+              <h3>Niederlenzer Musiktage — New Year’s Concert</h3>
               <div class="event-meta">Beyond Modern Orchestra &amp; Christoph Croisé · Niederlenz (CH)</div>
               <div class="event-links"><a href="https://www.niederlenzer-musiktage.com" target="_blank" rel="noopener">niederlenzer-musiktage.com</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">16 / 01 / 2027</div>
+            <div class="event-date">16 Jan 2027</div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
               <div class="event-meta">More Than Classic · Zurich (CH)</div>
@@ -526,16 +526,16 @@
           </div>
 
           <div class="event">
-            <div class="event-date">23 / 01 / 2027</div>
+            <div class="event-date">23 Jan 2027</div>
             <div class="event-body">
-              <h3>10 ans du festival Riviera Classic+</h3>
+              <h3>Riviera Classic+ Festival — 10th Anniversary</h3>
               <div class="event-meta">Sedunum String Orchestra · La Tour-de-Peilz (CH)</div>
               <div class="event-links"><a href="https://www.sedunum-so.ch/agenda.php" target="_blank" rel="noopener">sedunum-so.ch</a></div>
             </div>
           </div>
 
           <div class="event">
-            <div class="event-date">30 / 01 / 2027</div>
+            <div class="event-date">30 Jan 2027</div>
             <div class="event-body">
               <h3>Vivaldi meets Rock</h3>
               <div class="event-meta">More Than Classic · Zurich (CH)</div>
@@ -544,7 +544,7 @@
           </div>
 
           <div class="event">
-            <div class="event-date">21 / 02 / 2027</div>
+            <div class="event-date">21 Feb 2027</div>
             <div class="event-body">
               <h3>Trio Reynold</h3>
               <div class="event-meta">Lausanne (CH)</div>
@@ -562,12 +562,12 @@
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Media</p>
-      <h2>En vidéo</h2>
+      <h2>Videos</h2>
       <div class="rule"></div>
     </div>
     <div class="video-grid reveal">
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zDLnP8m_Ws8" title="Dvořák — Quintette avec piano n° 2, op. 81" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/iSl0LI-x7gc" title="Weinberg — Quintette avec piano, op. 18" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zDLnP8m_Ws8" title="Dvořák — Piano Quintet No. 2, Op. 81" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/iSl0LI-x7gc" title="Weinberg — Piano Quintet, Op. 18" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
   </div>
 </section>
@@ -577,14 +577,14 @@
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Gallery</p>
-      <h2>Galerie</h2>
+      <h2>Photographs</h2>
       <div class="rule"></div>
     </div>
     <div class="gallery reveal">
-      <a href="images/gallery-1.jpg" target="_blank" rel="noopener"><img src="images/gallery-1.jpg" alt="Cyprien Semayne — photographie 1" loading="lazy" /></a>
-      <a href="images/gallery-2.jpg" target="_blank" rel="noopener"><img src="images/gallery-2.jpg" alt="Cyprien Semayne — photographie 2" loading="lazy" /></a>
-      <a href="images/gallery-3.jpg" target="_blank" rel="noopener"><img src="images/gallery-3.jpg" alt="Cyprien Semayne — photographie 3" loading="lazy" /></a>
-      <a href="images/gallery-4.jpg" target="_blank" rel="noopener"><img src="images/gallery-4.jpg" alt="Cyprien Semayne — photographie 4" loading="lazy" /></a>
+      <a href="images/gallery-1.jpg" target="_blank" rel="noopener"><img src="images/gallery-1.jpg" alt="Cyprien Semayne — photograph 1" loading="lazy" /></a>
+      <a href="images/gallery-2.jpg" target="_blank" rel="noopener"><img src="images/gallery-2.jpg" alt="Cyprien Semayne — photograph 2" loading="lazy" /></a>
+      <a href="images/gallery-3.jpg" target="_blank" rel="noopener"><img src="images/gallery-3.jpg" alt="Cyprien Semayne — photograph 3" loading="lazy" /></a>
+      <a href="images/gallery-4.jpg" target="_blank" rel="noopener"><img src="images/gallery-4.jpg" alt="Cyprien Semayne — photograph 4" loading="lazy" /></a>
     </div>
   </div>
 </section>
@@ -594,12 +594,12 @@
   <div class="container">
     <div class="split reveal">
       <div class="split-media">
-        <img src="images/contact.jpg" alt="Cyprien Semayne, altiste" loading="lazy" />
+        <img src="images/contact.jpg" alt="Cyprien Semayne, violist" loading="lazy" />
       </div>
       <div>
         <div class="section-head">
           <p class="eyebrow">Contact</p>
-          <h2>Me contacter</h2>
+          <h2>Get in touch</h2>
           <div class="rule"></div>
         </div>
         <ul class="contact-list">
@@ -635,7 +635,7 @@
       <svg viewBox="0 0 24 24"><path d="M23 7.5s-.22-1.55-.9-2.23c-.86-.9-1.82-.9-2.26-.96C16.7 4.07 12 4.07 12 4.07h-.01s-4.7 0-7.83.24c-.44.05-1.4.05-2.26.96-.68.68-.9 2.23-.9 2.23S.78 9.32.78 11.14v1.7c0 1.82.22 3.64.22 3.64s.22 1.55.9 2.23c.86.9 1.98.87 2.48.96 1.8.17 7.62.24 7.62.24s4.7-.01 7.84-.24c.44-.06 1.4-.06 2.26-.96.68-.68.9-2.23.9-2.23s.22-1.82.22-3.64v-1.7c0-1.82-.22-3.64-.22-3.64zM9.75 14.6V9.35l4.9 2.63-4.9 2.62z"/></svg>
     </a>
   </div>
-  <small>© <span id="year"></span> Cyprien Semayne — Alto</small>
+  <small>© <span id="year"></span> Cyprien Semayne — Viola</small>
 </footer>
 
 <script>
@@ -663,7 +663,7 @@
   }, {threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Conserve l'ancre courante lors du changement de langue
+  // Keep the current anchor when switching language
   document.querySelectorAll('.lang a').forEach(a => a.addEventListener('click', () => {
     if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
   }));
