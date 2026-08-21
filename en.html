@@ -243,6 +243,11 @@
   .gallery a{overflow:hidden;display:block;}
   .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
   .gallery a:hover img{transform:scale(1.045);}
+  /* odd number of photos: the last one spans the full width, uncropped */
+  .gallery a:last-child:nth-child(odd){grid-column:1/-1;display:flex;justify-content:center;}
+  .gallery a:last-child:nth-child(odd) img{
+    width:auto;max-width:100%;aspect-ratio:auto;max-height:min(72vh,620px);
+  }
 
   /* ---------- CONTACT ---------- */
   .contact-list{list-style:none;margin:1.6rem 0 0;padding:0;}
@@ -617,6 +622,7 @@
       <a href="images/gallery-2.jpg" target="_blank" rel="noopener"><img src="images/gallery-2.jpg" alt="Cyprien Semayne — photograph 2" loading="lazy" /></a>
       <a href="images/gallery-3.jpg" target="_blank" rel="noopener"><img src="images/gallery-3.jpg" alt="Cyprien Semayne — photograph 3" loading="lazy" /></a>
       <a href="images/gallery-4.jpg" target="_blank" rel="noopener"><img src="images/gallery-4.jpg" alt="Cyprien Semayne — photograph 4" loading="lazy" /></a>
+      <a href="images/gallery-5.jpg" target="_blank" rel="noopener"><img src="images/gallery-5.jpg" alt="Cyprien Semayne — photograph 5" loading="lazy" /></a>
     </div>
   </div>
 </section>
