@@ -5,26 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- ============ LANGUAGE / LANGUE ============
-     Redirects to the French version when the system / browser language is
-     French. An explicit choice (FR / EN menu, or ?lang=fr|en) is remembered
-     and always takes precedence. -->
+     Picks the FR or EN version, in order of priority:
+       1. explicit choice — ?lang=fr|en, a click on FR / EN, or arriving from the other version
+       2. remembered choice — localStorage, falling back to a cookie
+       3. system / browser language
+     An explicit choice is honoured even when browser storage is blocked or
+     the ?lang= parameter is lost along the way. -->
 <script>
 (function () {
   var PAGE = 'en', OTHER = 'index.html', KEY = 'cs-lang';
-  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
-  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
-  var forced = (location.search.match(/[?&]lang=(fr|en)\b/) || [])[1];
-  if (forced) set(forced);
+  function remember(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    try { document.cookie = KEY + '=' + v + ';path=/;max-age=31536000;SameSite=Lax'; } catch (e) {}
+  }
+  function remembered() {
+    try { var v = localStorage.getItem(KEY); if (v === 'fr' || v === 'en') return v; } catch (e) {}
+    var m = document.cookie.match(/(?:^|;\s*)cs-lang=(fr|en)(?:;|$)/);
+    return m ? m[1] : null;
+  }
+  function fromSwitcher() { // arriving from either version of the site
+    if (!document.referrer) return false;
+    try {
+      var r = new URL(document.referrer, location.href);
+      return r.origin === location.origin && /(?:\/|\/index\.html|\/en\.html)$/.test(r.pathname);
+    } catch (e) { return false; }
+  }
+  window.csRememberLang = remember; // used by the FR / EN switcher
 
-  var pref = forced || get();
-  if (pref !== 'fr' && pref !== 'en') {
+  var choice = (location.search.match(/[?&]lang=(fr|en)\b/) || [])[1];
+  if (choice) remember(choice);
+  else if (fromSwitcher()) choice = PAGE; // EN was just clicked: stay here
+
+  var lang = choice || remembered();
+  if (lang !== 'fr' && lang !== 'en') {
     var list = (navigator.languages && navigator.languages.length)
       ? navigator.languages
       : [navigator.language || navigator.userLanguage || ''];
-    pref = /^fr\b/i.test(String(list[0] || '')) ? 'fr' : 'en';
+    lang = /^fr\b/i.test(String(list[0] || '')) ? 'fr' : 'en';
   }
-  if (pref !== PAGE) location.replace(OTHER + location.hash);
+  if (lang !== PAGE) location.replace(OTHER + location.hash);
 })();
 </script>
 
@@ -39,14 +59,26 @@
 <meta name="description" content="Cyprien Semayne, French violist — chamber musician and principal viola. Biography, concert calendar, media and contact." />
 <meta name="format-detection" content="telephone=no" />
 
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:site_name" content="Cyprien Semayne" />
 <meta property="og:title" content="Cyprien Semayne | Viola" />
 <meta property="og:description" content="Cyprien Semayne, French violist — chamber musician and principal viola." />
-<meta property="og:image" content="images/hero.jpg" />
+<meta property="og:image" content="https://cyprien-semayne.com/images/og-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cyprien Semayne, violist" />
 <meta property="og:url" content="https://cyprien-semayne.com/en.html" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Cyprien Semayne | Viola" />
 <meta name="twitter:description" content="Cyprien Semayne, French violist — chamber musician and principal viola." />
+<meta name="twitter:image" content="https://cyprien-semayne.com/images/og-card.jpg" />
+<meta name="twitter:image:alt" content="Cyprien Semayne, violist" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -663,8 +695,9 @@
   }, {threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Keep the current anchor when switching language
+  // Remember the chosen language and keep the current anchor
   document.querySelectorAll('.lang a').forEach(a => a.addEventListener('click', () => {
+    if (window.csRememberLang) window.csRememberLang(a.getAttribute('hreflang'));
     if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
   }));
 
